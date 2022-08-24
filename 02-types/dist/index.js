@@ -33,3 +33,29 @@ const sayHi = () => {
     console.log("Hi");
 };
 sayHi();
+// never
+const error = () => {
+    throw new Error("error");
+};
+// object
+let obj;
+obj = {
+    key: "value"
+};
+//type inference <= o ts entende algumas tipagens mesmo sem vc tipar
+let message2 = "alguma string";
+const logDetails = (uid, item) => {
+    console.log(`A product with the uid ${uid} has the title as ${item}`);
+};
+const logInfo = (uid, item) => {
+    console.log(`Um ${uid} e um ${item} so p test`);
+};
+const typeAliasExample = (uid, item) => {
+    console.log(`so to usando o type alias ${uid} e ${item}`);
+};
+logDetails("123", "sapato");
+const choosePlatform = (platform) => {
+    console.log(`The chosen platform was ${platform}!! gtz`);
+};
+//choosePlatform('something different');  da erro
+choosePlatform('Linux');

@@ -57,3 +57,36 @@ let obj: object;
 obj = {
     key: "value"
 };
+
+//type inference <= o ts entende algumas tipagens mesmo sem vc tipar
+let message2 = "alguma string";
+//message = 1; <= daria erro
+
+// window.addEventListener("click", (e) => {
+//     console.log(e.target);
+// });
+//type alias
+type Uid = number | string;
+
+const logDetails = (uid: number | string, item: string): void  => {
+    console.log(`A product with the uid ${uid} has the title as ${item}`);
+}
+
+const logInfo = (uid: number | string, item: string) : void => {
+    console.log(`Um ${uid} e um ${item} so p test`);
+}
+
+const typeAliasExample = (uid: Uid, item: string): void => {
+    console.log(`so to usando o type alias ${uid} e ${item}`);
+}
+
+logDetails("123", "sapato");
+
+type Platform = 'MacOs' | 'Windows' | 'Linux';
+
+const choosePlatform = (platform: Platform): void => {
+    console.log(`The chosen platform was ${platform}!! gtz`);
+}
+
+//choosePlatform('something different');  da erro
+choosePlatform('Linux');
