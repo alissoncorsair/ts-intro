@@ -44,3 +44,16 @@ const sayHi =  ():void => {
 
 sayHi();
 
+// null | undefined
+type Bla = string | undefined;
+
+// never
+const error = (): never => {
+    throw new Error("error");
+}
+
+// object
+let obj: object;
+obj = {
+    key: "value"
+};
