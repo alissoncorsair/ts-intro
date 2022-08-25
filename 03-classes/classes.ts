@@ -10,6 +10,16 @@ class UserAccount {
     logDetails(): void {
         console.log(`The player ${this.name} has ${this.age} years old! :)`);
     }
+
+    get getName(): string {
+        return this.name;
+    }
+
+    get getAge(): number {
+        return this.age;
+    }
+
+    
 }
 
 class CharAccount extends UserAccount {
