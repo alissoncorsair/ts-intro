@@ -1,5 +1,5 @@
 class UserAccount {
-   public name: string;
+   private name: string;
    protected age: number;
 
     constructor(name: string, age: number) {
@@ -34,14 +34,14 @@ class CharAccount extends UserAccount {
     }
 
     charLogDetails(): void {
-        console.log(`${this.name} is the owner of the account called ${this.nickname} and is ${this.age} years old. `)
+        console.log(`${this.getName} is the owner of the account called ${this.nickname} and is ${this.age} years old. `)
     }
 }
 
 
 const randomPlayer = new UserAccount("aleatorio", 19);
 randomPlayer.logDetails();
-console.log(randomPlayer.name);
+console.log(randomPlayer.getName);
 
 const anotherAccount = new CharAccount("alisson", 19, "khoria", 100)
 anotherAccount.charLogDetails();
