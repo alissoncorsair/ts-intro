@@ -30,3 +30,4 @@ const todoO: TodoOmit = {
     title: "outro algo",
     completed: false,
 }
+
