@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const userAccount_1 = require("./userAccount");
+const charAccount_1 = require("./charAccount");
+console.log("------user account-------");
+const randomPlayer = new userAccount_1.UserAccount("aleatorio", 19);
+randomPlayer.logDetails();
+console.log(randomPlayer.getName);
+console.log(randomPlayer);
+randomPlayer.setName = "random";
+console.log(randomPlayer.getName);
+console.log("\n------char account-------");
+const anotherAccount = new charAccount_1.CharAccount("alisson", 19, "khoria", 100, 'details');
+anotherAccount.charLogDetails();
+console.log(anotherAccount);
